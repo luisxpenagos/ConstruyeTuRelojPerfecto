@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construye tu Reloj Perfecto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #afbaf2;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h2 {
+            font-size: 18px;
+            color: #333;
+        }
+        .options {
+            margin-left: 20px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #4d557b;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #result {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #result img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Construye tu Reloj Perfecto</h1>
+    
+    <form id="quizForm">
+        <div class="question">
+            <h2>1. Tipo de Movimiento: ¿Qué tipo de movimiento prefieres para tu reloj?</h2>
+            <div class="options">
+                <input type="radio" id="mecanico" name="movimiento" value="mechanical" required>
+                <label for="mecanico">Mecánico</label><br>
+                
+                <input type="radio" id="cuarzo" name="movimiento" value="quartz" required>
+                <label for="cuarzo">Cuarzo</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>2. Material del Reloj: ¿Qué material prefieres para la caja de tu reloj?</h2>
+            <div class="options">
+                <input type="radio" id="acero" name="material" value="steel" required>
+                <label for="acero">Acero Inoxidable</label><br>
+                
+                <input type="radio" id="oro" name="material" value="gold" required>
+                <label for="oro">Oro</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>3. Tipo de Correa o Brazalete: ¿Qué prefieres para la correa o brazalete?</h2>
+            <div class="options">
+                <input type="radio" id="cuero" name="correa" value="leather bracelet" required>
+                <label for="cuero">Correa de Cuero</label><br>
+                
+                <input type="radio" id="metal" name="correa" value="metal bracelet" required>
+                <label for="metal">Brazalete de Metal</label>
+            </div>
+        </div>
+
+        <button type="button" onclick="showResults()">Ver Resultados</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function showResults() {
+            const movimiento = document.querySelector('input[name="movimiento"]:checked').value;
+            const material = document.querySelector('input[name="material"]:checked').value;
+            const correa = document.querySelector('input[name="correa"]:checked').value;
+
+            const imageName = `${material} ${movimiento} ${correa}`;
+            const imagePath = `img/${imageName}.jpg`;
+
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = `
+                <h2>Tu Reloj Ideal:</h2>
+                <img src="${imagePath}" alt="${imageName}">
+            `;
+        }
+    </script>
+
+</body>
+</html>

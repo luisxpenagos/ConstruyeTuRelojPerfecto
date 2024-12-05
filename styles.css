@@ -1,0 +1,117 @@
+head {
+    background-color: #C0B283;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #151A22;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    line-height: 1.6;
+
+    background-image: url('https://media.istockphoto.com/id/935729048/vector/vintage-hand-drawn-clocks-and-watches-time-vector-seamless-pattern.jpg?s=612x612&w=0&k=20&c=7iINHtnWowzpeVOPg61lRG7gjZjDvDN-IVe6PJcoEe8=');
+    background-repeat: repeat;
+    background-size: 400px 400px; 
+    background-color: #f3f0e6; 
+}
+
+h1 {
+    text-align: center;
+    color: #f3f0e6;
+    font-size: 2.5rem;
+    font-family: 'Great Vibes', cursive;
+    
+    background-color: rgba(21, 26, 34, 0.8);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 80%;
+    border-radius: 8px;
+    
+    border-bottom: 3px solid #C0B283;
+}
+
+.question {
+    background-color: #C0B283;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.question h2 {
+    font-size: 1.2rem;
+    color: #f3f0e6; 
+    margin-bottom: 10px;
+}
+
+.options label {
+    display: block;
+    font-size: 1rem;
+    color: #465048; 
+    background-color: #f3f0e6; 
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.options input[type="radio"] {
+    margin-right: 10px;
+}
+
+.options label:hover {
+    background-color: #E5DDC8;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #f3f0e6;
+    background-color: #465048;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #151A22;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#result {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #E5DDC8; 
+    border: 2px solid #C0B283;
+    border-radius: 10px;
+}
+
+#result h2 {
+    color: #151A22;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#result img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #465048;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
